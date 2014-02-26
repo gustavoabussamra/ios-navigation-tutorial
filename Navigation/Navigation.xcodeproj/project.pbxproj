@@ -19,8 +19,10 @@
 		27156F6818B76AF50053A99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F5018B76AF50053A99C /* UIKit.framework */; };
 		27156F7018B76AF50053A99C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27156F6E18B76AF50053A99C /* InfoPlist.strings */; };
 		27156F7218B76AF50053A99C /* NavigationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27156F7118B76AF50053A99C /* NavigationTests.m */; };
-		27156F7D18BA89430053A99C /* LetraAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27156F7C18BA89430053A99C /* LetraAViewController.m */; };
-		27156F8018BA8B210053A99C /* LetraBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27156F7F18BA8B210053A99C /* LetraBViewController.m */; };
+		7206A74418BE7EEE0023E018 /* A.png in Resources */ = {isa = PBXBuildFile; fileRef = 7263CE2E18BE7A980035C0BD /* A.png */; };
+		72B8DEC718BE65DA00F2B1FC /* TodosLetraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B8DEC518BE65DA00F2B1FC /* TodosLetraViewController.m */; };
+		72B8DEC818BE65DA00F2B1FC /* TodosLetraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B8DEC618BE65DA00F2B1FC /* TodosLetraViewController.xib */; };
+		72E5A98218BE822B00B8502B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E5A98118BE822B00B8502B /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +52,11 @@
 		27156F6D18B76AF50053A99C /* NavigationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NavigationTests-Info.plist"; sourceTree = "<group>"; };
 		27156F6F18B76AF50053A99C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27156F7118B76AF50053A99C /* NavigationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationTests.m; sourceTree = "<group>"; };
-		27156F7B18BA89430053A99C /* LetraAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetraAViewController.h; sourceTree = "<group>"; };
-		27156F7C18BA89430053A99C /* LetraAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetraAViewController.m; sourceTree = "<group>"; };
-		27156F7E18BA8B210053A99C /* LetraBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LetraBViewController.h; sourceTree = "<group>"; };
-		27156F7F18BA8B210053A99C /* LetraBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LetraBViewController.m; sourceTree = "<group>"; };
+		7263CE2E18BE7A980035C0BD /* A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = A.png; path = ../../../Downloads/A.png; sourceTree = "<group>"; };
+		72B8DEC418BE65DA00F2B1FC /* TodosLetraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodosLetraViewController.h; sourceTree = "<group>"; };
+		72B8DEC518BE65DA00F2B1FC /* TodosLetraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodosLetraViewController.m; sourceTree = "<group>"; };
+		72B8DEC618BE65DA00F2B1FC /* TodosLetraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodosLetraViewController.xib; sourceTree = "<group>"; };
+		72E5A98118BE822B00B8502B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E5A98218BE822B00B8502B /* AVFoundation.framework in Frameworks */,
 				27156F4F18B76AF50053A99C /* CoreGraphics.framework in Frameworks */,
 				27156F5118B76AF50053A99C /* UIKit.framework in Frameworks */,
 				27156F4D18B76AF50053A99C /* Foundation.framework in Frameworks */,
@@ -102,6 +106,7 @@
 		27156F4B18B76AF50053A99C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72E5A98118BE822B00B8502B /* AVFoundation.framework */,
 				27156F4C18B76AF50053A99C /* Foundation.framework */,
 				27156F4E18B76AF50053A99C /* CoreGraphics.framework */,
 				27156F5018B76AF50053A99C /* UIKit.framework */,
@@ -117,10 +122,9 @@
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
 				27156F5318B76AF50053A99C /* Supporting Files */,
-				27156F7B18BA89430053A99C /* LetraAViewController.h */,
-				27156F7C18BA89430053A99C /* LetraAViewController.m */,
-				27156F7E18BA8B210053A99C /* LetraBViewController.h */,
-				27156F7F18BA8B210053A99C /* LetraBViewController.m */,
+				72B8DEC418BE65DA00F2B1FC /* TodosLetraViewController.h */,
+				72B8DEC518BE65DA00F2B1FC /* TodosLetraViewController.m */,
+				72B8DEC618BE65DA00F2B1FC /* TodosLetraViewController.xib */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -128,6 +132,7 @@
 		27156F5318B76AF50053A99C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7263CE2E18BE7A980035C0BD /* A.png */,
 				27156F5418B76AF50053A99C /* Navigation-Info.plist */,
 				27156F5518B76AF50053A99C /* InfoPlist.strings */,
 				27156F5818B76AF50053A99C /* main.m */,
@@ -231,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27156F5718B76AF50053A99C /* InfoPlist.strings in Resources */,
+				7206A74418BE7EEE0023E018 /* A.png in Resources */,
 				27156F5F18B76AF50053A99C /* Images.xcassets in Resources */,
+				72B8DEC818BE65DA00F2B1FC /* TodosLetraViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +257,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B8DEC718BE65DA00F2B1FC /* TodosLetraViewController.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
-				27156F7D18BA89430053A99C /* LetraAViewController.m in Sources */,
-				27156F8018BA8B210053A99C /* LetraBViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +460,7 @@
 				27156F7718B76AF50053A99C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27156F7818B76AF50053A99C /* Build configuration list for PBXNativeTarget "NavigationTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +469,7 @@
 				27156F7A18B76AF50053A99C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
