@@ -35,7 +35,7 @@ int indice = 0;
     
     NSMutableArray *mLetras;
     mLetras = [NSMutableArray arrayWithObjects: @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z", nil];
-    NSMutableArray *mPalavras;
+//    NSMutableArray *mPalavras;
     mPalavras = [NSMutableArray arrayWithObjects: @"Apple", @"Banana", @"Casa", @"Dado", @"Elefante", @"Fada", @"Gato", @"Helicóptero", @"Igreja", @"Jacare", @"Kiko", @"Lapis", @"Macaco", @"Navio", @"Oculos", @"Pato", @"Queijo", @"Rato", @"Sapato", @"Tatu", @"Uva", @"Vaca", @"Walle", @"Xicara", @"Yakisoba", @"Zebra", nil];
     [super viewDidLoad];
     self.title = [NSString stringWithFormat:@"%@", [mLetras objectAtIndex:indice]];
@@ -52,10 +52,13 @@ int indice = 0;
     [fotos setFrame:CGRectMake(110, 70, 100, 150)];
     [fotos setImage: imagem];
     
+   
+    
     [botao
      setTitle:[NSString stringWithFormat:@"%@", [mPalavras objectAtIndex:indice]]
      forState:UIControlStateNormal];
     [botao sizeToFit];
+    [botao addTarget:self action:@selector(FalaPalavra:) forControlEvents:(UIControlEventTouchDown)];
     botao.center = self.view.center;
     
     [self.view addSubview:botao];
@@ -63,6 +66,25 @@ int indice = 0;
     
     
 }
+
+-(IBAction)FalaPalavra:(id)sender
+{
+    NSString *pa = [mPalavras objectAtIndex:indice];
+    NSLog(@"%@",pa);
+    
+    AVSpeechSynthesizer *so = [[AVSpeechSynthesizer alloc]init];
+    AVSpeechUtterance *ut = [[AVSpeechUtterance alloc]initWithString:pa];
+    ut.rate= AVSpeechUtteranceMinimumSpeechRate;
+    ut.voice= [AVSpeechSynthesisVoice voiceWithLanguage:@"pt-br"];
+    [so speakUtterance:ut];
+//    
+//    AVSpeechUtterance *som = [[AVSpeechUtterance alloc]initWithString:pa];
+
+
+    
+}
+
+
 -(void)prev:(id)sender {
     
     [self.navigationController popToViewController:self animated:YES];

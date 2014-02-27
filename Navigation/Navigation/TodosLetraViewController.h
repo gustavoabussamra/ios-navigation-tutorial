@@ -11,7 +11,11 @@
 
 @interface TodosLetraViewController : UIViewController
 
-@property (strong,nonatomic)AVSpeechSynthesizer *fala;
-@property (strong,nonatomic)AVSpeechUtterance *som;
+{
+    NSMutableArray *mPalavras;
+}
+
+
+-(IBAction)FalaPalavra:(id)sender;
 
 @end
