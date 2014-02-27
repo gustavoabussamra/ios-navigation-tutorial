@@ -28,8 +28,15 @@ int indice = 0;
 
 
 -(void) viewDidLoad {
+    
+    if (indice == 26){
+        indice = 0;
+    }
+    
     NSMutableArray *mLetras;
-    mLetras = [NSMutableArray arrayWithObjects: @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"X", @"W", @"Z", nil];
+    mLetras = [NSMutableArray arrayWithObjects: @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z", nil];
+    NSMutableArray *mPalavras;
+    mPalavras = [NSMutableArray arrayWithObjects: @"Apple", @"Banana", @"Casa", @"Dado", @"Elefante", @"Fada", @"Gato", @"Helicóptero", @"Igreja", @"Jacare", @"Kiko", @"Lapis", @"Macaco", @"Navio", @"Oculos", @"Pato", @"Queijo", @"Rato", @"Sapato", @"Tatu", @"Uva", @"Vaca", @"Walle", @"Xicara", @"Yakisoba", @"Zebra", nil];
     [super viewDidLoad];
     self.title = [NSString stringWithFormat:@"%@", [mLetras objectAtIndex:indice]];
     UIBarButtonItem *next = [[UIBarButtonItem alloc]
@@ -46,7 +53,7 @@ int indice = 0;
     [fotos setImage: imagem];
     
     [botao
-     setTitle:@"Mostre"
+     setTitle:[NSString stringWithFormat:@"%@", [mPalavras objectAtIndex:indice]]
      forState:UIControlStateNormal];
     [botao sizeToFit];
     botao.center = self.view.center;
